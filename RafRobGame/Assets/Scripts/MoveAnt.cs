@@ -7,6 +7,7 @@ public class MoveAnt : MonoBehaviour
 
     public float speed = 0.01f;
     private Vector3 move;
+    private Vector3 move2;
     public Transform player;
     public int motionX = 2,	motionZ = 2;
 
@@ -17,7 +18,7 @@ public class MoveAnt : MonoBehaviour
         {
             if (transform.position.x  - motionX > player.position.x)
             {
-                Debug.Log("góra_lewo");
+              //  Debug.Log("góra_lewo");
                 if (motionX > 0)
                     motionX *= -1;
                 if (motionZ > 0)
@@ -25,7 +26,7 @@ public class MoveAnt : MonoBehaviour
             }
             else
             {
-                Debug.Log("góra_prawo");
+              //  Debug.Log("góra_prawo");
                 if (motionX < 0)
                     motionX *= -1;
                 if (motionZ > 0)
@@ -37,7 +38,7 @@ public class MoveAnt : MonoBehaviour
         {
             if (transform.position.x  - motionX > player.position.x)
             {
-                Debug.Log("dół_lewo");
+              //  Debug.Log("dół_lewo");
                 if (motionX > 0)
                     motionX *= -1;
                 if (motionZ < 0)
@@ -46,7 +47,7 @@ public class MoveAnt : MonoBehaviour
             }
             else
             {
-                Debug.Log("dół_prawo");
+               // Debug.Log("dół_prawo");
                 if (motionX < 0)
                     motionX *= -1;
                 if (motionZ < 0)
@@ -59,7 +60,9 @@ public class MoveAnt : MonoBehaviour
 
     private void calcualte2()
     {
-
+        move2.x = (transform.position.x - player.position.x);
+        move2.y = 0;
+        move2.z = (transform.position.z - player.position.z);
     }
         // Start is called before the first frame update
         void Start()
@@ -68,7 +71,7 @@ public class MoveAnt : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         calcualte();
 
@@ -81,3 +84,4 @@ public class MoveAnt : MonoBehaviour
         transform.Translate(move);
     }
 }
+
