@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 7ff0cf27ed8e9684b9bdd381bab1f846
 NativeFormatImporter:
@@ -6,3 +7,9 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 7ff0cf27ed8e9684b9bdd381bab1f846
+NativeFormatImporter:
+  userData: 
+>>>>>>> master
