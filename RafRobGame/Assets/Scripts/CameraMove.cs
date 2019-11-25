@@ -14,19 +14,19 @@ public class CameraMove : MonoBehaviour
     {
         Vector3 _targetPos = new Vector3(carToFollow.position.x + offset.x, carToFollow.position.y + offset.y, carToFollow.position.z + offset.z);
 
-        transform.position = Vector3.Lerp(transform.position, _targetPos, travelTime * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, _targetPos, travelTime * Time.fixedDeltaTime);
     }
 
     public void LookAtTarget()
     {
         Vector3 _lookDirection = carToFollow.position - transform.position;
         Quaternion _rot = Quaternion.LookRotation(_lookDirection, Vector3.up);
-        transform.rotation = Quaternion.Lerp(transform.rotation, _rot, lookSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, _rot, lookSpeed * Time.fixedDeltaTime);
     }
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         MoveCamera();
         LookAtTarget();

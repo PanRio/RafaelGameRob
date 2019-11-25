@@ -320,15 +320,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 611190665e9410843b8a501cd8aa233a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  treshHold: 0.05
   animTrans: 60
   speed: 5
   rotationSpeed: 200
+  blendDividion: 1
 --- !u!4 &1664271106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 64594e524fc837947986bfe2ac410f91,
     type: 3}
   m_PrefabInstance: {fileID: 2133255476}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1664271107
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.580462
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.8203118, z: 0}
+--- !u!54 &1664271108
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271103}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!1 &1794742188
 GameObject:
   m_ObjectHideFlags: 0
